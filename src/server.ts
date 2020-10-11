@@ -1,10 +1,16 @@
-import express from 'express';
+import express, { json } from 'express';
 
 const port = 3333;
-const app = express();
 
-app.get('/', (request, response) => {
-    return response.json({message: "Hello World!"})
+const app = express();
+app.use(express.json());
+
+app.post('/user', (request, response) => {
+    const {name, email} = request.body;
+
+    const user = {name, email};
+    
+    return response.json(user)
 })
 
 app.listen(port, () => {
