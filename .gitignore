@@ -145,6 +145,7 @@ Temporary Items
 .apdisk
 
 # ################### NODE ###################
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
