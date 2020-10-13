@@ -1,5 +1,6 @@
 import express from 'express';
 import routes from './routes';
+import './database';
 
 const PORT = 3333;
 
